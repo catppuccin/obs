@@ -20,7 +20,7 @@
 /* Colors */
 
 OBSThemeMeta {
-    dark: 'true';
+    dark: 'false';
     author: 'Xurdejl';
 }
 
