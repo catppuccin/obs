@@ -35,7 +35,7 @@ OBSTheme {
     base: rgb(30, 32, 48);
     alternateBase: rgb(24, 25, 38);
 
-    text: rgb(165, 173, 203);
+    text: rgb(202, 211, 245);
     
     button: rgb(54, 58, 79);
     buttonText: rgb(165, 173, 203);
@@ -768,7 +768,8 @@ QPushButton[themeID="replayBufferButton"]:!hover:!pressed:checked,
 QPushButton[themeID="vcamButton"]:!hover:!pressed:checked,
 #modeSwitch:!hover:!pressed:checked,
 #broadcastButton:!hover:!pressed:checked {
-    background: rgb(88, 22, 36);
+    background: rgb(138, 173, 244);
+    color: rgb(24, 25, 38);
 }
 
 /* Primary Control Button Hover Coloring */
@@ -778,19 +779,10 @@ QPushButton[themeID="replayBufferButton"]:!pressed:checked,
 QPushButton[themeID="vcamButton"]:!pressed:checked,
 #modeSwitch:hover:!pressed:checked,
 #broadcastButton:hover:!pressed:checked {
-    background: rgb(116, 32, 49);
-    color: palette(text);
+    background: rgb(183, 189, 248);
+    color: rgb(24, 25, 38);
 }
 
-/* Primary Control Button Checked Coloring */
-#streamButton:pressed:checked,
-#recordButton:pressed:checked,
-QPushButton[themeID="replayBufferButton"]:pressed:checked,
-QPushButton[themeID="vcamButton"]:pressed:checked,
-#modeSwitch:pressed:checked,
-#broadcastButton:pressed:checked {
-    background: rgb(63, 21, 30);
-}
 
 /* Buttons */
 
@@ -1088,7 +1080,7 @@ OBSBasicFilters #widget_2 QPushButton {
 * [themeID="previewProgramLabels"] {
     font-size: 14pt;
     font-weight: bold;
-    color: rgb(210, 210, 210);
+    color: rgb(165, 173, 203);
     margin-bottom: 4px;
 }
 
