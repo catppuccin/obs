@@ -36,7 +36,7 @@ OBSTheme {
     alternateBase: rgb(17, 17, 27);
 
     text: rgb(205, 214, 244);
-    
+
     button: rgb(49, 50, 68);
     buttonText: rgb(166, 173, 200);
 
@@ -62,14 +62,14 @@ OBSTheme::disabled {
     windowText: rgb(127, 132, 156);
     text: rgb(127, 132, 156);
     button: rgb(30, 30, 46);
-    
+
     buttonText: rgb(24, 24, 37);
     brightText: rgb(24, 24, 37);
 }
 
 OBSTheme::inactive {
     text: rgb(166, 173, 200);
-    
+
     highlight: rgb(17, 17, 27);
     highlightText: rgb(205, 214, 244);
 }
@@ -300,8 +300,8 @@ QDockWidget {
     font-size: 10.5pt;
     font-weight: bold;
 
-    titlebar-close-icon: url('./Catppuccin/Dark/Close.svg');
-    titlebar-normal-icon: url('./Catppuccin/Dark/Popout.svg');
+    titlebar-close-icon: url('./Catppuccin/Dark/close.svg');
+    titlebar-normal-icon: url('./Catppuccin/Dark/popout.svg');
 }
 
 QDockWidget::title {
@@ -416,7 +416,7 @@ QScrollBar::handle:pressed {
 }
 
 QScrollBar::handle:vertical {
-    min-height: 20px;   
+    min-height: 20px;
 }
 
 QScrollBar::handle:horizontal {
@@ -522,6 +522,10 @@ QToolButton:pressed {
 
 * [themeID="pauseIconSmall"] {
     qproperty-icon: url(./Catppuccin/Dark/media-pause.svg);
+}
+
+* [themeID="filtersIcon"] {
+    qproperty-icon: url(./Dark/filter.svg);
 }
 
 QToolBarExtension {
@@ -811,7 +815,7 @@ QPushButton:pressed {
     background-color: rgb(17, 17, 27);
 }
 
-QPushButton:disabled {
+QPushButton:disabled, QToolButton:disabled {
     background-color: rgb(17, 17, 27);
 }
 
@@ -875,7 +879,7 @@ QSlider::handle:vertical:pressed {
 }
 
 QSlider::add-page:vertical {
-    background-color: palette(highlight); 
+    background-color: palette(highlight);
     border-radius: 2px;
 }
 
@@ -966,10 +970,6 @@ QHeaderView::section {
 
 /* Mute CheckBox */
 
-MuteCheckBox {
-    margin: 4px 0px 0px;
-}
-
 MuteCheckBox::indicator:checked {
     image: url(./Catppuccin/Dark/mute.svg);
 }
@@ -980,19 +980,6 @@ MuteCheckBox::indicator:unchecked {
 
 OBSHotkeyLabel[hotkeyPairHover=true] {
     color: rgb(137, 180, 250);
-}
-
-/* Pause */
-PauseCheckBox {
-    outline: none;
-}
-
-PauseCheckBox::indicator:checked {
-    image: url(:/res/images/media-pause.svg);
-}
-
-PauseCheckBox::indicator:unchecked {
-    image: url(:/res/images/media-play.svg);
 }
 
 /* Label warning/error */
@@ -1484,7 +1471,7 @@ QCalendarWidget QToolButton:pressed {
 
 /* Month Dropdown Menu */
 QCalendarWidget QMenu {
-    
+
 }
 /* Year spinbox */
 QCalendarWidget QSpinBox {
@@ -1522,4 +1509,14 @@ QCalendarWidget QAbstractItemView:disabled {
 /* Disable icons on QDialogButtonBox */
 QDialogButtonBox {
     dialogbuttonbox-buttons-have-icons: 0;
+}
+
+/* Stats dialog */
+OBSBasicStats {
+    background: palette(dark);
+}
+
+/* Advanced audio dialog */
+OBSBasicAdvAudio #scrollAreaWidgetContents {
+    background: palette(dark);
 }
