@@ -525,7 +525,7 @@ QToolButton:pressed {
 }
 
 * [themeID="filtersIcon"] {
-    qproperty-icon: url(./Light/filter.svg);
+    qproperty-icon: url(./Catppuccin/Light/filter.svg);
 }
 
 QToolBarExtension {
