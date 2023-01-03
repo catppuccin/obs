@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source="./theme/*"
+source="./themes/*"
 
 # Set the destination path based on the OSTYPE variable
 if [ "$OSTYPE" = "linux-gnu" ]; then
