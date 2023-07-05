@@ -24,6 +24,7 @@
   - **Option 1:** Use the provided scripts
     - **Windows**: Right-click the `install (Windows).ps1` script and then select "Run with PowerShell".
     - **macOS** or **Linux**:
+      - Use Bash
       - Open a terminal window and navigate to the folder where the script is located.
       - Run the following command: `./install.sh`
         
