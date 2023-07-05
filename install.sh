@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 source="./themes/*"
 
 # Set the destination path based on the OSTYPE variable
 if [ "$OSTYPE" = "linux-gnu" ]; then
-  destination="~/.config/obs-studio/themes/"
-elif [ "$OSTYPE" = "darwin"* ]; then
-  destination="~/Library/Application Support/obs-studio/themes/"
+  destination="$HOME/.config/obs-studio/themes/"
+elif [[ "$OSTYPE" = darwin* ]]; then
+  destination="$HOME/Library/Application Support/obs-studio/themes/"
 else
   echo "Error: Unsupported operating system"
   exit 1
@@ -21,4 +21,4 @@ fi
 # Copy the files from the source to the destination, overwriting any existing files
 cp -rf "$source" "$destination"
 echo "Theme installed successfully!"
-read -p "Press Enter to exit"
+read -r -p "Press Enter to exit"
