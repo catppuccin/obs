@@ -6,6 +6,13 @@ source="$(dirname "$0")/themes/"
 # Set the destination path based on the OSTYPE variable
 if [ "$OSTYPE" = "linux-gnu" ]; then
   destination="$HOME/.config/obs-studio/themes/"
+
+  if command -v flatpak &>/dev/null; then
+    if flatpak list --columns=application | grep -q "com.obsproject.Studio"; then
+      echo "Found Flatpak installation of OBS Studio, installing for Flatpak"
+      destination="$HOME/.var/app/com.obsproject.Studio/config/obs-studio/themes/"
+    fi
+  fi
 elif [[ "$OSTYPE" = darwin* ]]; then
   destination="$HOME/Library/Application Support/obs-studio/themes/"
 else
