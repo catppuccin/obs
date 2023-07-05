@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
-source="./themes/"
+source="$(dirname "$0")/themes/"
 
 # Set the destination path based on the OSTYPE variable
 if [ "$OSTYPE" = "linux-gnu" ]; then
@@ -19,6 +20,6 @@ if [ ! -d "$destination" ]; then
 fi
 
 # Copy the files from the source to the destination, overwriting any existing files
-cp -rf "$source/*" "$destination"
+cp -rf "$source/"* "$destination"
 echo "Theme installed successfully!"
 read -r -p "Press Enter to exit"
