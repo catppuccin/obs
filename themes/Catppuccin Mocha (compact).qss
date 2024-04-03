@@ -647,6 +647,22 @@ QStatusBar::item {
     border: none;
 }
 
+/* Qt enforces a padding inside its status bar, so we
+ * oversize it and use margin to crunch it back down
+ */
+OBSBasicStatusBar {
+    margin-top: 4px;
+    border-top: 1px solid palette(dark);
+    background: palette(window);
+}
+
+StatusBarWidget > QFrame {
+    margin-top: 2px;
+    border: 0px solid palette(dark);
+    border-left-width: 1px;
+    padding: 0px 12px 4px;
+}
+
 /* Table View */
 
 QTableView {
@@ -680,21 +696,21 @@ OBSHotkeyLabel[hotkeyPairHover=true] {
 
 /* Group Collapse Checkbox */
 
-SourceTreeSubItemCheckBox {
+QCheckBox[sourceTreeSubItem=true] {
     background: transparent;
     outline: none;
 }
 
-SourceTreeSubItemCheckBox::indicator {
+QCheckBox[sourceTreeSubItem=true]::indicator {
     width: 10px;
     height: 10px;
 }
 
-SourceTreeSubItemCheckBox::indicator:checked {
+QCheckBox[sourceTreeSubItem=true]::indicator:checked {
     image: url(./Catppuccin/Dark/expand.svg);
 }
 
-SourceTreeSubItemCheckBox::indicator:unchecked {
+QCheckBox[sourceTreeSubItem=true]::indicator:unchecked {
     image: url(./Catppuccin/Dark/collapse.svg);
 }
 
@@ -773,38 +789,38 @@ OBSBasicSettings {
     qproperty-advancedIcon: url(./Catppuccin/Dark/settings/advanced.svg);
 }
 
-OBSBasicSettings QListView::item {
+OBSBasicSettings QListWidget::item {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
 /* Locked CheckBox */
 
-LockedCheckBox {
+QCheckBox[lockCheckBox=true] {
     outline: none;
     background: transparent;
 }
 
-LockedCheckBox::indicator:checked {
+QCheckBox[lockCheckBox=true]::indicator:checked {
     image: url(./Catppuccin/Dark/locked.svg);
 }
 
-LockedCheckBox::indicator:unchecked {
+QCheckBox[lockCheckBox=true]::indicator:unchecked {
     image: url(:res/images/unlocked.svg);
 }
 
 /* Visibility CheckBox */
 
-VisibilityCheckBox {
+QCheckBox[visibilityCheckBox=true] {
     outline: none;
     background: transparent;
 }
 
-VisibilityCheckBox::indicator:checked {
+QCheckBox[visibilityCheckBox=true]::indicator:checked {
     image: url(./Catppuccin/Dark/visible.svg);
 }
 
-VisibilityCheckBox::indicator:unchecked {
+QCheckBox[visibilityCheckBox=true]::indicator:unchecked {
     image: url(:res/images/invisible.svg);
 }
 
