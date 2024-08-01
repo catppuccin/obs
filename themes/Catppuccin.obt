@@ -32,56 +32,47 @@
     --ctp_base: #1e1e2e;
     --ctp_mantle: #181825;
     --ctp_crust: #11111b;
-}
 
-/* Custom theme information.  This will set the application's QPalette, as
- * well as pass to QML via the OBSTheme object.
- * Can also use OBSTheme::disabled, OBSTheme::active, and OBSTheme::inactive.
- * Using it without will set all three (making 'active' a bit redundant) */
-OBSTheme {
-    window: rgb(30, 30, 46);
-    windowText: rgb(166, 173, 200);
+    --palette_window: var(--ctp_base);
+    --palette_windowText: var(--ctp_subtext0);
 
-    base: rgb(24, 24, 37);
-    alternateBase: rgb(17, 17, 27);
+    --palette_base: var(--ctp_mantle);
+    --palette_alternateBase: var(--ctp_crust);
 
-    text: rgb(205, 214, 244);
+    --palette_text: var(--ctp_text);
 
-    button: rgb(49, 50, 68);
-    buttonText: rgb(166, 173, 200);
+    --palette_button: var(--ctp_surface0);
+    --palette_buttonText: var(--ctp_subtext0);
 
-    brightText: rgb(166, 173, 200);
+    --palette_brightText: var(--ctp_subtext0);
 
-    light: rgb(49, 50, 68);
-    mid: rgb(30, 30, 46);
-    dark: rgb(24, 24, 37);
-    shadow: rgb(17, 17, 27);
+    --palette_light: var(--ctp_surface0);
+    --palette_mid: var(--ctp_base);
+    --palette_dark: var(--ctp_mantle);
+    --palette_shadow: var(--ctp_crust);
 
-    primary: rgb(69, 71, 90);
-    primaryLight: rgb(137, 180, 250);
-    primaryDark: rgb(17, 17, 27);
+    --palette_primary: var(--ctp_surface1);
+    --palette_primaryLight: var(--ctp_blue);
+    --palette_primaryDark: var(--ctp_crust);
 
-    highlight: rgb(137, 180, 250);
-    highlightText: rgb(166, 173, 200);
+    --palette_highlight: var(--ctp_blue);
+    --palette_highlightText: var(--ctp_subtext0);
 
-    link: rgb(245, 224, 220);
-    linkVisited: rgb(242, 205, 205);
-}
+    --palette_text: var(--ctp_text);
+    --palette_link: var(--ctp_rosewater);
+    --palette_linkVisited: var(--ctp_flamingo);
 
-OBSTheme::disabled {
-    windowText: rgb(127, 132, 156);
-    text: rgb(127, 132, 156);
-    button: rgb(30, 30, 46);
+    --palette_windowText_disabled: var(--ctp_overlay1);
+    --palette_text_disabled: var(--ctp_overlay1);
+    --palette_button_disabled: var(--ctp_base);
 
-    buttonText: rgb(24, 24, 37);
-    brightText: rgb(24, 24, 37);
-}
+    --palette_buttonText_disabled: var(--ctp_mantle);
+    --palette_brightText_disabled: var(--ctp_mantle);
 
-OBSTheme::inactive {
-    text: rgb(166, 173, 200);
+    --palette_text_inactive: var(--ctp_subtext0);
 
-    highlight: rgb(17, 17, 27);
-    highlightText: rgb(205, 214, 244);
+    --palette_highlight_inactive: var(--ctp_crust);
+    --palette_highlightText_inactive: var(--ctp_text);
 }
 
 /* Default widget style, we override only what is needed. */
