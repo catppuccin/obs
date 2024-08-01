@@ -33,7 +33,7 @@
     --ctp_mantle: #181825;
     --ctp_crust: #11111b;
 
-    --palette_window: var(--ctp_base);
+    --palette_window: var(--ctp_mantle);
     --palette_windowText: var(--ctp_subtext0);
 
     --palette_base: var(--ctp_mantle);
@@ -157,7 +157,7 @@ QMainWindow,
 QStatusBar,
 QMenuBar,
 QMenu {
-    background-color: palette(window);
+    background-color: var(--ctp_base);
 }
 
 /* macOS Separator Fix */
@@ -170,7 +170,7 @@ QMainWindow::separator {
 }
 
 QMainWindow::separator:hover {
-    border: 1px solid var(--ctp_green);
+    border: 1px solid transparent;
     margin: 1px;
 }
 
@@ -373,7 +373,7 @@ OBSDock > QWidget {
     background: palette(dark);
     border-bottom-left-radius: var(--border_radius);
     border-bottom-right-radius: var(--border_radius);
-    border: 1px solid var(--ctp_overlay0);
+    border: 1px solid var(--ctp_mantle);
     border-top: none;
 }
 
@@ -384,11 +384,6 @@ OBSDock > QWidget {
 OBSDock QLabel {
     background: transparent;
 }
-
-/* OBSDock QComboBox,
-OBSDock QPushButton {
-    margin: 1px 2px;
-} */
 
 QDockWidget {
     font-size: var(--font_base);
@@ -433,13 +428,13 @@ QScrollArea {
  */
 OBSBasicStatusBar {
     margin-top: 4px;
-    border-top: 1px solid var(--ctp_overlay0);
+    border-top: 1px solid var(--ctp_mantle);
     background: palette(dark);
 }
 
 StatusBarWidget > QFrame {
     margin-top: 1px;
-    border: 0px solid var(--ctp_overlay0);
+    border: 0px solid transparent;
     border-left-width: 1px;
     padding: 0px 8px 2px;
 }
@@ -845,7 +840,7 @@ QDoubleSpinBox::down-button {
     width: var(--input_height);
     height: var(--spinbox_button_height);
     border-left: 1px solid var(--ctp_crust);
-    border-top: 1px solid var(--ctp_crust);
+    border-top: 1px solid transparent;
     border-radius: 0px;
     border-bottom-right-radius: var(--border_radius_small);
 }
@@ -965,7 +960,7 @@ QPushButton[toolButton="true"] {
     background-color: palette(button);
     padding: var(--padding_base) var(--padding_base);
     margin: 0px var(--spacing_base);
-    border: 1px solid var(--button_border);
+    border: 1px solid transparent;
     border-radius: var(--border_radius);
     icon-size: var(--icon_base);
 }
@@ -1012,18 +1007,18 @@ QPushButton:pressed:hover,
 QPushButton[toolButton="true"]:pressed,
 QPushButton[toolButton="true"]:pressed:hover {
     background-color: var(--ctp_crust);
-    border-color: var(--ctp_surface1);
+    border-color: var(--ctp_crust);
 }
 
 QToolButton:pressed,
 QToolButton:pressed:hover {
     background-color: var(--ctp_crust);
-    border-color: var(--ctp_surface1);
+    border-color: var(--ctp_crust);
 }
 
 QPushButton:disabled {
     background-color: var(--ctp_crust);
-    border-color: var(--ctp_surface1);
+    border-color: var(--ctp_crust);
 }
 
 QToolButton:disabled,
@@ -1122,7 +1117,7 @@ QSlider::handle:disabled {
     background-color: var(--ctp_surface0);
     padding: var(--padding_base_border) var(--padding_base_border);
     margin: 0px;
-    border: 1px solid var(--button_border);
+    border: 1px solid transparent;
     border-radius: var(--border_radius);
     icon-size: var(--icon_base);
 }
@@ -1144,7 +1139,7 @@ QSlider::handle:disabled {
 #stackedMixerArea {
     border: none;
     padding: 0px;
-    border-bottom: 1px solid #3c404b;
+    border-bottom: 1px solid palette(window);
 }
 
 VolControl #volLabel {
@@ -1157,7 +1152,7 @@ VolControl #volLabel {
 /* Horizontal Mixer */
 #hMixerScrollArea VolControl {
     padding: 0px var(--padding_xlarge) var(--padding_base);
-    border-bottom: 1px solid var(--ctp_overlay0);
+    border-bottom: 1px solid palette(window);
 }
 
 #hMixerScrollArea VolControl QSlider {
@@ -1520,7 +1515,7 @@ MuteCheckBox::indicator:unchecked {
     background-color: palette(button);
     padding: var(--padding_base_border) var(--padding_base_border);
     margin: 0px;
-    border: 1px solid var(--button_border);
+    border: 1px solid transparent;
     border-radius: var(--border_radius);
     icon-size: var(--icon_base);
 }
