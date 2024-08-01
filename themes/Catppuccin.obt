@@ -1097,6 +1097,7 @@ OBSBasicFilters #widget_2 QPushButton {
 
 OBSBasicSettings {
     qproperty-generalIcon: url(theme:Dark/settings/general.svg);
+    qproperty-appearanceIcon: url(theme:Dark/settings/appearance.svg);
     qproperty-streamIcon: url(theme:Dark/settings/stream.svg);
     qproperty-outputIcon: url(theme:Dark/settings/output.svg);
     qproperty-audioIcon: url(theme:Dark/settings/audio.svg);
