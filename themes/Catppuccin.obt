@@ -825,7 +825,6 @@ QDoubleSpinBox::up-button {
     subcontrol-position: top right; /* position at the top right corner */
 
     width: var(--input_height);
-    height: var(--spinbox_button_height);
     border-left: 1px solid var(--ctp_crust);
     border-bottom: 1px solid transparent;
     border-radius: 0px;
@@ -838,7 +837,6 @@ QDoubleSpinBox::down-button {
     subcontrol-position: bottom right; /* position at the top right corner */
 
     width: var(--input_height);
-    height: var(--spinbox_button_height);
     border-left: 1px solid var(--ctp_crust);
     border-top: 1px solid transparent;
     border-radius: 0px;
