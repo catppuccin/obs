@@ -20,27 +20,15 @@ whiskers:
 }
 
 VolumeMeter {
-{%- if flavor.identifier == "frappe" %}
-    qproperty-foregroundNominalColor: rgb(119, 185, 75);
-    qproperty-foregroundWarningColor: rgb(230, 103, 38);
-    qproperty-foregroundErrorColor: rgb(216, 54, 57);
-{% elif flavor.identifier == "macchiato" %}
-    qproperty-foregroundNominalColor: rgb(109, 194, 81);
-    qproperty-foregroundWarningColor: rgb(238, 111, 41);
-    qproperty-foregroundErrorColor: rgb(225, 54, 79);
-{% elif flavor.identifier == "mocha" %}
-    qproperty-foregroundNominalColor: rgb(95, 205, 86);
-    qproperty-foregroundWarningColor: rgb(246, 120, 43);
-    qproperty-foregroundErrorColor: rgb(234, 52, 103);
-{% elif flavor.identifier == "latte" %}
-    qproperty-backgroundNominalColor: rgb(48, 120, 32);
-    qproperty-backgroundWarningColor: rgb(198, 73, 1);
-    qproperty-backgroundErrorColor: rgb(157, 11, 43);
-    qproperty-foregroundNominalColor: var(--ctp_green);
-    qproperty-foregroundWarningColor: var(--ctp_peach);
-    qproperty-foregroundErrorColor: var(--ctp_red);
-{% endif %}
-    qproperty-magnitudeColor: rgb(49, 50, 8);
+{%- if flavor.dark %}
+    qproperty-foregroundNominalColor: #{{ green | sub(lightness=15) | get(key="hex")}};
+    qproperty-foregroundWarningColor: #{{ peach | sub(lightness=15) | get(key="hex")}};
+    qproperty-foregroundErrorColor: #{{ red | sub(lightness=15) | get(key="hex")}};
+{% else %}
+    qproperty-foregroundNominalColor: #{{ green | add(lightness=15) | get(key="hex")}};
+    qproperty-foregroundWarningColor: #{{ peach | add(lightness=15) | get(key="hex")}};
+    qproperty-foregroundErrorColor: #{{ red | add(lightness=15) | get(key="hex")}};
+{% endif -%}
 }
 
 {%- set icon_theme = if(cond=flavor.dark, t="Dark", f="Light") %}

@@ -36,14 +36,9 @@
 }
 
 VolumeMeter {
-    qproperty-backgroundNominalColor: rgb(48, 120, 32);
-    qproperty-backgroundWarningColor: rgb(198, 73, 1);
-    qproperty-backgroundErrorColor: rgb(157, 11, 43);
-    qproperty-foregroundNominalColor: var(--ctp_green);
-    qproperty-foregroundWarningColor: var(--ctp_peach);
-    qproperty-foregroundErrorColor: var(--ctp_red);
-
-    qproperty-magnitudeColor: rgb(49, 50, 8);
+    qproperty-foregroundNominalColor: #62ce4a;
+    qproperty-foregroundWarningColor: #fe9558;
+    qproperty-foregroundErrorColor: #f13d64;
 }
 
 /* Context Menu */
