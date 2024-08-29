@@ -36,9 +36,10 @@
 }
 
 VolumeMeter {
-    qproperty-foregroundNominalColor: var(--ctp_green);
-    qproperty-foregroundWarningColor: var(--ctp_peach);
-    qproperty-foregroundErrorColor: var(--ctp_red);
+    qproperty-foregroundNominalColor: rgb(109, 194, 81);
+    qproperty-foregroundWarningColor: rgb(238, 111, 41);
+    qproperty-foregroundErrorColor: rgb(225, 54, 79);
+
     qproperty-magnitudeColor: rgb(49, 50, 8);
 }
 
