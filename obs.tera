@@ -17,6 +17,7 @@ whiskers:
 {%- for identifier, color in flavor.colors %}
     --ctp_{{ identifier }}: #{{ color.hex }};
 {%- endfor %}
+    --ctp_selection_background: #{{ surface2 | mix(color=base, amount=0.4) | get(key="hex")}};
 }
 
 VolumeMeter {

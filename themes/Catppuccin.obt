@@ -113,7 +113,7 @@
 QWidget {
     alternate-background-color: palette(base);
     color: palette(text);
-    selection-background-color: var(--ctp_crust);
+    selection-background-color: var(--ctp_selection_background);
     selection-color: palette(text);
     font-size: var(--font_base);
     font-family: 'Open Sans', '.AppleSystemUIFont', Helvetica, Arial, 'MS Shell Dlg', sans-serif;

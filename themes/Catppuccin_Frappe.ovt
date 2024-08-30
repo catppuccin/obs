@@ -33,6 +33,7 @@
     --ctp_base: #303446;
     --ctp_mantle: #292c3c;
     --ctp_crust: #232634;
+    --ctp_selection_background: #44495d;
 }
 
 VolumeMeter {
