@@ -6,33 +6,6 @@
 }
 
 @OBSThemeVars {
-    --ctp_rosewater: #f5e0dc;
-    --ctp_flamingo: #f2cdcd;
-    --ctp_pink: #f5c2e7;
-    --ctp_mauve: #cba6f7;
-    --ctp_red: #f38ba8;
-    --ctp_maroon: #eba0ac;
-    --ctp_peach: #fab387;
-    --ctp_yellow: #f9e2af;
-    --ctp_green: #a6e3a1;
-    --ctp_teal: #94e2d5;
-    --ctp_sky: #89dceb;
-    --ctp_sapphire: #74c7ec;
-    --ctp_blue: #89b4fa;
-    --ctp_lavender: #b4befe;
-    --ctp_text: #cdd6f4;
-    --ctp_subtext1: #bac2de;
-    --ctp_subtext0: #a6adc8;
-    --ctp_overlay2: #9399b2;
-    --ctp_overlay1: #7f849c;
-    --ctp_overlay0: #6c7086;
-    --ctp_surface2: #585b70;
-    --ctp_surface1: #45475a;
-    --ctp_surface0: #313244;
-    --ctp_base: #1e1e2e;
-    --ctp_mantle: #181825;
-    --ctp_crust: #11111b;
-
     --palette_window: var(--ctp_mantle);
     --palette_windowText: var(--ctp_subtext0);
 
