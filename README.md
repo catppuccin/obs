@@ -17,26 +17,10 @@
 
 ## Usage
 
-1. [Clone](https://github.com/catppuccin/obs/archive/refs/heads/main.zip) this repository locally.
-
-2. Install the theme using one of the following options:
-
-  - **Option 1:** Use the provided scripts
-    - **Windows**: Right-click the `install (Windows).ps1` script and then select "Run with PowerShell".
-    - **macOS** or **Linux**:
-      - Use Bash
-      - Open a terminal window and navigate to the folder where the script is located.
-      - Run the following command: `./install.sh`
-        
-  - **Option 2:** Install the theme manually
-    - Copy the contents of the *themes* folder into:
-        - **Windows**: WinKey+R > %APPDATA%\obs-studio\themes\
-        - **macOS**: Cmd+Shift+G > ~/Library/Application Support/obs-studio/themes/
-        - **Linux**: ~/.config/obs-studio/themes/
-
-      (You may have to create the themes directory yourself.)
-
-3. Open OBS settings and select one of the flavours from the *Themes* dropdown.
+1. Clone this repository locally.
+2. Copy the contents of [`themes/`](./themes/) into the OBS themes directory for your operating system: see [obsproject/obs-studio Wiki - Installing custom themes](https://github.com/obsproject/obs-studio/wiki/Custom-Themes#installing-custom-themes).
+3. Open OBS > **Settings** > **Appearance**.
+4. Select "Catppuccin" in the **Theme** dropdown, and select your preferred flavor in the **Style** dropdown.
 
 ## 💝 Thanks to
 
