@@ -42,6 +42,94 @@ VolumeMeter {
     qproperty-foregroundErrorColor: #f13d64;
 }
 
+/* Icon Overrides */
+
+.icon-plus {
+    qproperty-icon: url(theme:Light/plus.svg);
+}
+
+.icon-minus {
+    qproperty-icon: url(theme:Light/minus.svg);
+}
+
+.icon-trash {
+    qproperty-icon: url(theme:Light/trash.svg);
+}
+
+.icon-clear {
+    qproperty-icon: url(theme:Light/entry-clear.svg);
+}
+
+.icon-gear {
+    qproperty-icon: url(theme:Light/settings/general.svg);
+}
+
+.icon-dots-vert {
+    qproperty-icon: url(theme:Light/dots-vert.svg);
+}
+
+.icon-refresh {
+    qproperty-icon: url(theme:Light/refresh.svg);
+}
+
+.icon-cogs {
+    qproperty-icon: url(theme:Light/cogs.svg);
+}
+
+.icon-touch {
+    qproperty-icon: url(theme:Light/interact.svg);
+}
+
+.icon-up {
+    qproperty-icon: url(theme:Light/up.svg);
+}
+
+.icon-down {
+    qproperty-icon: url(theme:Light/down.svg);
+}
+
+.icon-pause {
+    qproperty-icon: url(theme:Light/media-pause.svg);
+}
+
+.icon-filter {
+    qproperty-icon: url(theme:Light/filter.svg);
+}
+
+.icon-revert {
+    qproperty-icon: url(theme:Light/revert.svg);
+}
+
+.icon-save {
+    qproperty-icon: url(theme:Light/save.svg);
+}
+
+/* Media icons */
+
+.icon-media-play {
+    qproperty-icon: url(theme:Light/media/media_play.svg);
+}
+
+.icon-media-pause {
+    qproperty-icon: url(theme:Light/media/media_pause.svg);
+}
+
+.icon-media-restart {
+    qproperty-icon: url(theme:Light/media/media_restart.svg);
+}
+
+.icon-media-stop {
+    qproperty-icon: url(theme:Light/media/media_stop.svg);
+}
+
+.icon-media-next {
+    qproperty-icon: url(theme:Light/media/media_next.svg);
+}
+
+.icon-media-prev {
+    qproperty-icon: url(theme:Light/media/media_previous.svg);
+}
+
 /* Context Menu */
 QMenu::right-arrow {
     image: url(theme:Light/expand.svg);
@@ -63,58 +151,6 @@ QPushButton#sourceFiltersButton {
 }
 
 /* Scenes and Sources toolbar */
-* [themeID="addIconSmall"] {
-    qproperty-icon: url(theme:Light/plus.svg);
-}
-
-* [themeID="removeIconSmall"] {
-    qproperty-icon: url(theme:Light/trash.svg);
-}
-
-* [themeID="clearIconSmall"] {
-    qproperty-icon: url(theme:Light/entry-clear.svg);
-}
-
-* [themeID="propertiesIconSmall"] {
-    qproperty-icon: url(theme:Light/settings/general.svg);
-}
-
-* [themeID="configIconSmall"] {
-    qproperty-icon: url(theme:Light/settings/general.svg);
-}
-
-* [themeID="menuIconSmall"] {
-    qproperty-icon: url(theme:Light/dots-vert.svg);
-}
-
-* [themeID="refreshIconSmall"] {
-    qproperty-icon: url(theme:Light/refresh.svg);
-}
-
-* [themeID="cogsIcon"] {
-    qproperty-icon: url(theme:Light/cogs.svg);
-}
-
-#sourceInteractButton {
-    qproperty-icon: url(theme:Light/interact.svg);
-}
-
-* [themeID="upArrowIconSmall"] {
-    qproperty-icon: url(theme:Light/up.svg);
-}
-
-* [themeID="downArrowIconSmall"] {
-    qproperty-icon: url(theme:Light/down.svg);
-}
-
-* [themeID="pauseIconSmall"] {
-    qproperty-icon: url(theme:Light/media-pause.svg);
-}
-
-* [themeID="filtersIcon"] {
-    qproperty-icon: url(theme:Light/filter.svg);
-}
-
 QToolBarExtension {
     qproperty-icon: url(theme:Light/dots-vert.svg);
 }
@@ -127,7 +163,7 @@ QDateTimeEdit::down-arrow {
 
 QComboBox::down-arrow:editable,
 QDateTimeEdit::down-arrow:editable {
-    image: url(theme:Light/down.svg);
+    image: url(theme:Light/collapse.svg);
 }
 
 /* Spinbox and doubleSpinbox */
@@ -187,66 +223,62 @@ QGroupBox::indicator:checked:disabled {
 }
 
 /* Locked CheckBox */
-QCheckBox[lockCheckBox=true]::indicator:checked,
-QCheckBox[lockCheckBox=true]::indicator:checked:hover {
+.indicator-lock::indicator:checked,
+.indicator-lock::indicator:checked:hover {
     image: url(theme:Light/locked.svg);
 }
 
 /* Visibility CheckBox */
-QCheckBox[visibilityCheckBox=true]::indicator:checked,
-QCheckBox[visibilityCheckBox=true]::indicator:checked:hover {
+.indicator-visibility::indicator:checked,
+.indicator-visibility::indicator:checked:hover {
     image: url(theme:Light/visible.svg);
 }
 
-* [themeID="revertIcon"] {
-    qproperty-icon: url(theme:Light/revert.svg);
-}
-
 /* Mute CheckBox */
-MuteCheckBox::indicator:checked {
+.indicator-mute::indicator:checked {
     image: url(theme:Light/mute.svg);
 }
 
-MuteCheckBox::indicator:indeterminate {
+.indicator-mute::indicator:indeterminate {
     image: url(theme:Light/unassigned.svg);
 }
 
-MuteCheckBox::indicator:unchecked {
+.indicator-mute::indicator:unchecked {
     image: url(theme:Light/settings/audio.svg);
 }
 
-MuteCheckBox::indicator:unchecked:hover {
+.indicator-mute::indicator:unchecked:hover {
     image: url(theme:Light/settings/audio.svg);
 }
 
-MuteCheckBox::indicator:unchecked:focus {
+.indicator-mute::indicator:unchecked:focus {
     image: url(theme:Light/settings/audio.svg);
 }
 
-MuteCheckBox::indicator:checked:hover {
+.indicator-mute::indicator:checked:hover {
     image: url(theme:Light/mute.svg);
 }
 
-MuteCheckBox::indicator:checked:focus {
+.indicator-mute::indicator:checked:focus {
     image: url(theme:Light/mute.svg);
 }
 
-MuteCheckBox::indicator:checked:disabled {
+.indicator-mute::indicator:checked:disabled {
     image: url(theme:Light/mute.svg);
 }
 
-MuteCheckBox::indicator:unchecked:disabled {
+.indicator-mute::indicator:unchecked:disabled {
     image: url(theme:Light/settings/audio.svg);
 }
 
 /* Sources List Group Collapse Checkbox */
-QCheckBox[sourceTreeSubItem=true]::indicator:checked,
-QCheckBox[sourceTreeSubItem=true]::indicator:checked:hover {
+.indicator-expand::indicator:checked,
+.indicator-expand::indicator:checked:hover {
     image: url(theme:Light/expand.svg);
 }
 
-QCheckBox[sourceTreeSubItem=true]::indicator:unchecked,
-QCheckBox[sourceTreeSubItem=true]::indicator:unchecked:hover {
+.indicator-expand::indicator:unchecked,
+.indicator-expand::indicator:unchecked:hover {
     image: url(theme:Light/collapse.svg);
 }
 
@@ -268,36 +300,6 @@ OBSBasic {
     qproperty-sceneIcon: url(theme:Light/sources/scene.svg);
     qproperty-defaultIcon: url(theme:Light/sources/default.svg);
     qproperty-audioProcessOutputIcon: url(theme:Light/sources/windowaudio.svg);
-}
-
-/* Save icon */
-* [themeID="replayIconSmall"] {
-    qproperty-icon: url(theme:Light/save.svg);
-}
-
-/* Media icons */
-* [themeID="playIcon"] {
-    qproperty-icon: url(theme:Light/media/media_play.svg);
-}
-
-* [themeID="pauseIcon"] {
-    qproperty-icon: url(theme:Light/media/media_pause.svg);
-}
-
-* [themeID="restartIcon"] {
-    qproperty-icon: url(theme:Light/media/media_restart.svg);
-}
-
-* [themeID="stopIcon"] {
-    qproperty-icon: url(theme:Light/media/media_stop.svg);
-}
-
-* [themeID="nextIcon"] {
-    qproperty-icon: url(theme:Light/media/media_next.svg);
-}
-
-* [themeID="previousIcon"] {
-    qproperty-icon: url(theme:Light/media/media_previous.svg);
 }
 
 /* YouTube Integration */
