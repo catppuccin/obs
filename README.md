@@ -39,7 +39,7 @@
 > [!IMPORTANT]  
 > If you are on OBS `30.1.2` or below, please follow the
 > instructions in the
-> [`pre-32.2.0`](https://github.com/catppuccin/obs/tree/pre-30.2.0) tag.
+> [`pre-30.2.0`](https://github.com/catppuccin/obs/tree/pre-30.2.0) tag.
 
 1. Clone this repository locally.
 2. Copy the contents of [`themes/`](./themes/) into the OBS themes directory for your operating system: see [obsproject/obs-studio Wiki - Installing custom themes](https://github.com/obsproject/obs-studio/wiki/Custom-Themes#installing-custom-themes).
