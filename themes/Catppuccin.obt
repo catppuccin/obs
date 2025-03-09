@@ -1098,7 +1098,7 @@ QPushButton:disabled {
 
 QToolButton:disabled,
 .btn-tool:disabled {
-    background-color: var(--ctp_crust);
+    background-color: transparent;
     border-color: transparent;
 }
 
