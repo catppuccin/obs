@@ -690,6 +690,10 @@ QToolBar {
     margin: var(--spacing_base) 0px;
 }
 
+QToolBar QToolBarSeparator {
+    background-color: var(--ctp_surface0);
+}
+
 QToolBarExtension {
     background: palette(button);
     min-width: 12px;
