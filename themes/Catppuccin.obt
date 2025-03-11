@@ -690,6 +690,10 @@ QToolBar {
     margin: var(--spacing_base) 0px;
 }
 
+QToolBar QToolBarSeparator {
+    background-color: var(--ctp_surface0);
+}
+
 QToolBarExtension {
     background: palette(button);
     min-width: 12px;
@@ -1094,7 +1098,7 @@ QPushButton:disabled {
 
 QToolButton:disabled,
 .btn-tool:disabled {
-    background-color: var(--ctp_crust);
+    background-color: transparent;
     border-color: transparent;
 }
 
