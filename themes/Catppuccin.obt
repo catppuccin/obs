@@ -996,6 +996,7 @@ QDoubleSpinBox::down-arrow {
 #modeSwitch:!hover:!pressed:checked,
 #broadcastButton:!hover:!pressed:checked {
     background: var(--ctp_blue);
+    color: var(--ctp_crust);
 }
 
 /* Primary Control Button Hover Coloring */
