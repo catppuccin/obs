@@ -93,6 +93,8 @@
     --settings_scrollbar_size: calc(var(--scrollbar_size) + 9px);
 
     /* Inputs / Controls */
+    --border_color: var(--ctp_surface0);
+
     --border_radius: 4px;
     --border_radius_small: 2px;
     --border_radius_large: 6px;
@@ -335,12 +337,16 @@ QToolTip {
 
 /* Context Menu */
 
+QMenu::indicator {
+    left: var(--padding_large);
+}
+
 QMenu::icon {
     left: 4px;
 }
 
 QMenu::separator {
-    background: var(--ctp_overlay0);
+    background: var(--border_color);
     height: 1px;
     margin: var(--spacing_base) var(--spacing_large);
 }
@@ -379,6 +385,10 @@ SourceTree {
     padding: var(--spacing_base);
 }
 
+QMenu {
+    border: 1px solid var(--border_color);
+}
+
 QListWidget::item,
 SourceTreeItem,
 SceneTree::item {
@@ -396,7 +406,6 @@ QMenu::item,
 SceneTree::item {
     border-radius: var(--border_radius);
     color: palette(text);
-    border: 1px solid transparent;
 }
 
 SourceTree::item {
@@ -492,7 +501,7 @@ OBSDock > QWidget {
     background: palette(dark);
     border-bottom-left-radius: var(--border_radius);
     border-bottom-right-radius: var(--border_radius);
-    border: 1px solid var(--ctp_mantle);
+    border: 1px solid transparent;
     border-top: none;
 }
 
@@ -547,7 +556,7 @@ QScrollArea {
  */
 OBSBasicStatusBar {
     margin-top: 4px;
-    border-top: 1px solid var(--ctp_mantle);
+    border-top: 1px solid transparent;
     background: palette(dark);
 }
 
@@ -788,6 +797,16 @@ QDateTimeEdit {
     padding-left: 10px;
 }
 
+QComboBox QAbstractItemView {
+    padding: var(--spacing_base) var(--spacing_large);
+    border: 1px solid var(--border_color);
+    outline: none;
+}
+
+QComboBox QAbstractItemView::item {
+    padding: var(--padding_large) var(--padding_xlarge);
+}
+
 QComboBox QAbstractItemView::item:selected,
 QComboBox QAbstractItemView::item:hover {
     background-color: var(--ctp_crust);
@@ -798,6 +817,11 @@ QComboBox:focus,
 QDateTimeEdit:hover,
 QDateTimeEdit:selected {
     border-color: var(--ctp_overlay0);
+}
+
+QComboBox:on {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 QComboBox::drop-down,
@@ -1078,14 +1102,14 @@ QPushButton:checked:focus {
     background-color: var(--ctp_surface1);
 }
 
-QToolButton:pressed,
-QToolButton:pressed:hover {
+QPushButton:pressed,
+QPushButton:pressed:hover {
     background-color: var(--ctp_crust);
     border-color: var(--ctp_crust);
 }
 
-QPushButton:pressed,
-QPushButton:pressed:hover,
+QToolButton:pressed,
+QToolButton:pressed:hover,
 .btn-tool:pressed,
 .btn-tool:pressed:hover {
     background-color: var(--ctp_crust);
@@ -1230,7 +1254,7 @@ VolControl #volLabel {
 /* Horizontal Mixer */
 #hMixerScrollArea VolControl {
     padding: 0px var(--padding_xlarge) var(--padding_base);
-    border-bottom: 1px solid var(--ctp_surface0);
+    border-bottom: 1px solid var(--border_color);
 }
 
 #hMixerScrollArea VolControl QSlider {
@@ -1244,12 +1268,12 @@ VolControl #volLabel {
 
 /* Vertical Mixer */
 #stackedMixerArea QScrollBar:vertical {
-    border-left: 1px solid var(--ctp_surface0);
+    border-left: 1px solid var(--border_color);
 }
 
 #vMixerScrollArea VolControl {
     padding: var(--padding_large) 0px var(--padding_base);
-    border-right: 1px solid var(--ctp_surface0);
+    border-right: 1px solid var(--border_color);
 }
 
 #vMixerScrollArea VolControl QSlider {
@@ -1603,6 +1627,10 @@ OBSHotkeyWidget QPushButton {
 
 /* Source Icons */
 
+.source-icon {
+    margin-right: var(--spacing_large);
+}
+
 OBSBasic {
     qproperty-imageIcon: url(theme:Dark/sources/image.svg);
     qproperty-colorIcon: url(theme:Dark/sources/brush.svg);
@@ -1850,6 +1878,10 @@ OBSBasicAdvAudio #scrollAreaWidgetContents {
     border-color: var(--ctp_base);
 }
 
+#previewScalingMode:on {
+    background-color: var(--ctp_base);
+}
+
 #previewXScrollBar,
 #previewYScrollBar {
     background: transparent;
@@ -1869,4 +1901,31 @@ OBSBasicAdvAudio #scrollAreaWidgetContents {
 
 #previewYScrollBar {
     width: 16px;
+}
+
+#previewZoomInButton {
+    border: none;
+    border-radius: 0px;
+    outline: none;
+}
+
+#previewZoomOutButton {
+    border: none;
+    border-radius: 0px;
+    outline: none;
+}
+
+#previewZoomInButton:!hover,
+#previewZoomOutButton:!hover {
+    background-color: transparent;
+}
+
+#previewZoomInButton:pressed,
+#previewZoomOutButton:pressed {
+    background-color: palette(button);
+}
+
+#previewZoomInButton:focus,
+#previewZoomOutButton:focus {
+    border: 1px solid var(--ctp_base);
 }
