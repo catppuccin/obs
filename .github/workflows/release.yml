@@ -1,0 +1,40 @@
+name: Release
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Whiskers
+        uses: catppuccin/setup-whiskers@v2
+
+      - name: Build themes
+        run: whiskers obs.tera
+
+      - name: Package themes
+        run: |
+          zip -j catppuccin-obs.zip themes/Catppuccin.obt themes/Catppuccin_*.ovt
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: catppuccin-obs.zip
+          body: |
+            ## Installation
+
+            1. Download `catppuccin-obs.zip` and extract it.
+            2. Copy all extracted files into the OBS themes directory for your OS:
+               see [Installing custom themes](https://github.com/obsproject/obs-studio/wiki/Custom-Themes#installing-custom-themes).
+            3. Open OBS > **Settings** > **Appearance**.
+            4. Select **Catppuccin** in the Theme dropdown, then pick your flavor in Style.
