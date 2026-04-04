@@ -184,6 +184,11 @@ SourceTreeItem:selected:hover {
     color: var(--ctp_text);
 }
 
+QMenuBar::item:selected {
+    background: var(--ctp_surface1);
+    color: var(--ctp_text);
+}
+
 /* VolumeMeter - Catppuccin palette tones for track colors */
 VolumeMeter {
     qproperty-backgroundNominalColor: var(--ctp_green);
