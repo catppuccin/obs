@@ -101,8 +101,8 @@
     --palette_dark:   var(--ctp_mantle);
     --palette_shadow: var(--ctp_crust);
 
-    --palette_highlight:      var(--ctp_blue);
-    --palette_highlightedText: var(--ctp_subtext0);
+    --palette_highlight:      var(--ctp_surface1);
+    --palette_highlightedText: var(--ctp_text);
 
     --palette_link:        var(--ctp_rosewater);
     --palette_linkVisited: var(--ctp_flamingo);
@@ -200,7 +200,13 @@ VolumeControl.volume-preview .mixer-category {
     color: var(--ctp_green);
 }
 
-/* T-Bar uses Catppuccin blue */
+/* Sliders - Yami hardcodes --blue2, override with Catppuccin blue */
+QSlider::sub-page:horizontal,
+QSlider::add-page:vertical {
+    background-color: var(--ctp_blue);
+}
+
+/* T-Bar */
 .slider-tbar::sub-page:horizontal {
     background: var(--ctp_blue);
 }
