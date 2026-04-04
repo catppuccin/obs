@@ -145,6 +145,19 @@ QWidget {
     color: var(--ctp_crust);
 }
 
+/*
+ * QPushButton:checked - Yami uses --primary (ctp_blue) background
+ * with --text as the text color. In dark flavors both are light; in
+ * Latte both are dark - contrast fails in all cases.
+ * ctp_crust is the darkest neutral in dark flavors and a light grey
+ * in Latte, so it always contrasts against ctp_blue.
+ */
+QPushButton:checked,
+QPushButton:checked:hover,
+QPushButton:checked:focus {
+    color: var(--ctp_crust);
+}
+
 /* VolumeMeter - Catppuccin palette tones for track colors */
 VolumeMeter {
     qproperty-backgroundNominalColor: var(--ctp_green);
