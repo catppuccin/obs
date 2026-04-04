@@ -1,0 +1,49 @@
+@OBSThemeMeta {
+    name: 'Macchiato';
+    id: 'com.obsproject.Catppuccin.Macchiato';
+    extends: 'com.obsproject.Catppuccin';
+    author: 'Xurdejl';
+    dark: 'true';
+}
+
+@OBSThemeVars {
+    --ctp_rosewater: #f4dbd6;
+    --ctp_flamingo: #f0c6c6;
+    --ctp_pink: #f5bde6;
+    --ctp_mauve: #c6a0f6;
+    --ctp_red: #ed8796;
+    --ctp_maroon: #ee99a0;
+    --ctp_peach: #f5a97f;
+    --ctp_yellow: #eed49f;
+    --ctp_green: #a6da95;
+    --ctp_teal: #8bd5ca;
+    --ctp_sky: #91d7e3;
+    --ctp_sapphire: #7dc4e4;
+    --ctp_blue: #8aadf4;
+    --ctp_lavender: #b7bdf8;
+    --ctp_text: #cad3f5;
+    --ctp_subtext1: #b8c0e0;
+    --ctp_subtext0: #a5adcb;
+    --ctp_overlay2: #939ab7;
+    --ctp_overlay1: #8087a2;
+    --ctp_overlay0: #6e738d;
+    --ctp_surface2: #5b6078;
+    --ctp_surface1: #494d64;
+    --ctp_surface0: #363a4f;
+    --ctp_base: #24273a;
+    --ctp_mantle: #1e2030;
+    --ctp_crust: #181926;
+    --ctp_selection_background: #3a3d53;
+}
+
+/*
+ * VolumeMeter foreground peak colors are tuned per-flavor.
+ * Dark flavors subtract lightness to avoid blowout on dark tracks.
+ * Latte adds lightness for contrast on the light track background.
+ */
+VolumeMeter {
+    qproperty-foregroundNominalColor: #78c75d;
+    qproperty-foregroundWarningColor: #ef7939;
+    qproperty-foregroundErrorColor:   #e3455d;
+}
+
