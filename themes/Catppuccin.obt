@@ -58,8 +58,7 @@
     --input_border_hover: var(--ctp_surface2);
     --input_border_focus: var(--ctp_blue);
 
-    --list_item_bg_selected: var(--ctp_surface1);
-    --list_item_bg_hover:    var(--ctp_surface0);
+    --list_item_bg_hover: var(--ctp_surface0);
 
     --button_bg:          var(--ctp_surface0);
     --button_bg_hover:    var(--ctp_surface1);
@@ -156,6 +155,33 @@ QPushButton:checked,
 QPushButton:checked:hover,
 QPushButton:checked:focus {
     color: var(--ctp_crust);
+}
+
+/*
+ * List/tree selection - Yami hardcodes var(--primary) for :selected
+ * background which makes text unreadable (both primary and text track
+ * in the same lightness direction per flavor). Override to surface1
+ * with explicit text color. SourceTree::item:selected falls through to
+ * Qt palette and also needs an explicit rule.
+ */
+QMenu::item:selected,
+QMenu > QWidget:selected,
+QListView::item:selected,
+QListWidget::item:selected,
+SourceTree::item:selected,
+SourceTreeItem:selected {
+    background-color: var(--ctp_surface1);
+    color: var(--ctp_text);
+    border-color: var(--ctp_surface2);
+}
+
+QMenu::item:selected:hover,
+QListView::item:selected:hover,
+QListWidget::item:selected:hover,
+SourceTree::item:selected:hover,
+SourceTreeItem:selected:hover {
+    background-color: var(--ctp_surface2);
+    color: var(--ctp_text);
 }
 
 /* VolumeMeter - Catppuccin palette tones for track colors */
