@@ -40,15 +40,15 @@
 > Requires OBS Studio 30.2 or later. For older versions see the
 > [`pre-30.2.0`](https://github.com/catppuccin/obs/tree/pre-30.2.0) tag.
 
-1. Download `catppuccin-obs.zip` from the [latest release](https://github.com/catppuccin/obs/releases/latest) and extract it.
-2. Copy all extracted files into the OBS themes directory for your OS:
-   see [Installing custom themes](https://github.com/obsproject/obs-studio/wiki/Custom-Themes#installing-custom-themes).
+1. Clone this repository locally.
+2. Copy the contents of [`themes/`](./themes/) into the OBS themes directory
+   for your operating system: see [obsproject/obs-studio Wiki - Installing custom themes](https://github.com/obsproject/obs-studio/wiki/Custom-Themes#installing-custom-themes).
 3. Open OBS > **Settings** > **Appearance**.
 4. Select **Catppuccin** in the **Theme** dropdown, then pick your flavor in the **Style** dropdown.
 
 ## Development
 
-Themes are generated from [`obs.tera`](./obs.tera) using [Whiskers](https://github.com/catppuccin/whiskers).
+Themes are generated from [`obs.tera`](./obs.tera) using [whiskers](https://github.com/catppuccin/whiskers).
 
 ```sh
 # Build all .ovt flavor files
