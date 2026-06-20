@@ -27,7 +27,7 @@ jobs:
           zip -j catppuccin-obs.zip themes/Catppuccin.obt themes/Catppuccin_*.ovt
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           files: catppuccin-obs.zip
           body: |
